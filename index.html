@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Itinerary | Kidventure Hub</title><link href="styles.css" rel="stylesheet"/><style>
+.reorder-note{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0;padding:13px 15px;border:1px solid #efd66e;border-radius:14px;background:#fff7cc}.reorder-note p{margin:0}.reset-order{border:2px solid #7756d9;background:#fff;color:#5631c5;border-radius:11px;padding:8px 11px;font-weight:900;cursor:pointer}.day{position:relative;grid-template-columns:46px 105px minmax(0,1fr)}.drag-handle{display:flex;align-items:center;justify-content:center;border:0;background:#f3efff;color:#6543bd;border-radius:13px;font-size:22px;cursor:grab;touch-action:none}.drag-handle:active{cursor:grabbing}.move-buttons{position:absolute;right:12px;top:12px;display:flex;gap:5px}.move-buttons button{width:40px;height:40px;border:1px solid #cfc8eb;border-radius:10px;background:#fff;color:#5631c5;font-size:20px;font-weight:900;cursor:pointer}.move-buttons button:disabled{opacity:.3;cursor:not-allowed}.day.dragging{opacity:.45}.day.drag-over{outline:3px dashed #7756d9;outline-offset:3px}.day>div:nth-of-type(2){min-width:0;padding-right:88px}
+@media(max-width:560px){
+  .wrap{width:min(100% - 20px,1160px)}
+  .section{padding-top:12px}
+  .section-head{gap:10px;margin-bottom:12px}
+  .section-head h2{font-size:28px;line-height:1.12}
+  .section-head p{font-size:15px}
+  .section-head .btn{width:100%}
+  .notice{font-size:14px;padding:12px}
+  .reorder-note{align-items:stretch;flex-direction:column;font-size:14px;padding:12px}
+  .reset-order{width:100%;min-height:44px}
+  .itinerary{gap:12px}
+  .day{display:block;padding:14px;border-radius:18px;overflow:hidden}
+  .drag-handle{position:absolute;left:14px;top:14px;width:42px;height:42px}
+  .move-buttons{right:14px;top:14px}
+  .date-badge{display:inline-flex;align-items:center;min-height:42px;width:auto;max-width:calc(100% - 154px);margin:0 0 16px 54px;padding:9px 14px;text-align:left;font-size:16px;white-space:nowrap}
+  .day>div:nth-of-type(2){width:100%;min-width:0;padding:0}
+  .day h3{margin:0 0 8px;font-size:22px;line-height:1.2;overflow-wrap:normal;word-break:normal}
+  .day p{margin:10px 0;font-size:16px;line-height:1.5}
+  .day-meta{display:grid;grid-template-columns:1fr;gap:7px;margin:10px 0}
+  .pill{display:flex;width:100%;max-width:100%;padding:8px 10px;border-radius:12px;font-size:14px;white-space:normal}
+  .day-links{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:14px}
+  .day-links a{display:flex;width:100%;min-height:46px;justify-content:center;padding:10px 12px;font-size:16px;text-align:center}
+}
+@media(max-width:380px){
+  .date-badge{max-width:calc(100% - 144px);margin-left:50px;padding-inline:10px;font-size:14px}
+  .move-buttons button{width:38px;height:38px}
+  .day h3{font-size:20px}
+}
+@media print{.reorder-note,.drag-handle,.move-buttons{display:none!important}.day{grid-template-columns:105px 1fr}.day>div:nth-of-type(2){padding-right:0}}
+</style></head><body><header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><span class="brand-mark">K</span>Kita's Kidventure Hub</a><nav class="nav-links"><a class="" href="index.html">Activities</a><a class="active" href="itinerary.html">Itinerary</a><a class="" href="home.html">Home Fun</a><a class="" href="movies.html">Movies</a><a class="" href="food.html">Food</a><a class="" href="toolkit.html">Toolkit</a></nav></div></header><main><section class="section"><div class="wrap"><div class="section-head"><div><h2>July 21–August 2 itinerary</h2><p>Each link has its own color, border and icon so directions, official information and backup help are easy to distinguish.</p></div><button class="btn btn-primary no-print" data-print="">🖨️ Print itinerary</button></div><p class="notice">Starting point: Cory Cornel Lane and Grayson Gardens Drive, Richmond. Check <a href="https://weather.com/us/texas/city/richmond/tenday" target="_blank"><strong>Richmond’s 10-day forecast</strong></a> before outdoor plans.</p><div class="reorder-note no-print"><p><strong>↕️ Reorder the plan:</strong> Drag cards on a computer, or use the arrow buttons on a phone. The order saves automatically on this device.</p><button class="reset-order" id="reset-itinerary" type="button">Reset original order</button></div><div class="itinerary"><article class="day" data-day-id="day-1" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Tue 7/21</div><div><h3>Houston Museum of Natural Science</h3><div class="day-meta"><span class="pill">🕒 5–8 p.m.</span><span class="pill">💵 Free permanent halls; parking extra</span></div><p><strong>Plan:</strong> Eat early; bring light layers for cold galleries.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Houston+Museum+of+Natural+Science" target="_blank">📍 Directions</a><a class="official" href="https://www.hmns.org/visit/hours-admission/" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-2" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Wed 7/22</div><div><h3>Fort Bend Children’s Discovery Center</h3><div class="day-meta"><span class="pill">🕒 9 a.m.–1 p.m.</span><span class="pill">💵 About $75 online for five</span></div><p><strong>Plan:</strong> Buy online; pack lunch or plan nearby food.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Fort+Bend+Children%27s+Discovery+Center" target="_blank">📍 Directions</a><a class="official" href="https://www.childrensdiscoveryfb.org/" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-3" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Thu 7/23</div><div><h3>Children’s Museum Houston Free Family Night</h3><div class="day-meta"><span class="pill">🕒 5–8 p.m.</span><span class="pill">💵 Free with timed reservation</span></div><p><strong>Plan:</strong> Reserve five tickets; allow time for parking.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Children%27s+Museum+Houston" target="_blank">📍 Directions</a><a class="official" href="https://www.cmhouston.org/events/free-family-night" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-4" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Fri 7/24</div><div><h3>Frosty Fridays at Katy Dog Park</h3><div class="day-meta"><span class="pill">🕒 10–11:30 a.m.</span><span class="pill">💵 Free</span></div><p><strong>Plan:</strong> Arrive early because treats are while supplies last.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Katy+Dog+Park" target="_blank">📍 Directions</a><a class="official" href="https://www.cityofkaty.com/visitors/events" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-5" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Sat 7/25</div><div><h3>Imperial Farmers Market + Sugar Land Memorial Park</h3><div class="day-meta"><span class="pill">🕒 9 a.m.–noon</span><span class="pill">💵 Free unless shopping</span></div><p><strong>Plan:</strong> Use the market scavenger hunt; bring picnic food.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Imperial+Farmers+Market,+Sugar+Land,+TX" target="_blank">📍 Directions</a><a class="official" href="https://www.sugarlandtx.gov/437/Special-Events" target="_blank">🔗 Official details</a><a class="backup" href="guides/market-scavenger.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-6" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Sun 7/26</div><div><h3>Relax Day + Snack Bar Movie Night</h3><div class="day-meta"><span class="pill">🕒 Flexible</span><span class="pill">💵 Low cost</span></div><p><strong>Plan:</strong> Let kids use pretend tickets and choose snacks with points.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX" target="_blank">📍 Directions</a><a class="official" href="movies.html" target="_blank">🔗 Official details</a><a class="backup" href="guides/snack-bar.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-7" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Mon 7/27</div><div><h3>Sugar Land Branch Library</h3><div class="day-meta"><span class="pill">🕒 10 a.m.–noon</span><span class="pill">💵 Free</span></div><p><strong>Plan:</strong> Choose funny, fact and read-aloud books.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Sugar+Land+Branch+Library" target="_blank">📍 Directions</a><a class="official" href="https://www.fortbendlibraries.gov/events/upcoming" target="_blank">🔗 Official details</a><a class="backup" href="guides/library-challenge.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-8" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Tue 7/28</div><div><h3>Hermann Park Commons Water Day</h3><div class="day-meta"><span class="pill">🕒 9:30 a.m.–12:30 p.m.</span><span class="pill">💵 Free; parking extra</span></div><p><strong>Plan:</strong> Swimsuits, water shoes, towels, dry clothes.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Hermann+Park+Commons,+Houston,+TX" target="_blank">📍 Directions</a><a class="official" href="https://hermannpark.org/plans-projects/the-commons-at-hermann-park/" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-9" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Wed 7/29</div><div><h3>Mary Jo Peckham Park Mini Golf</h3><div class="day-meta"><span class="pill">🕒 9 a.m.–noon</span><span class="pill">💵 Free</span></div><p><strong>Plan:</strong> Start with golf before crowds; pack picnic.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Mary+Jo+Peckham+Park" target="_blank">📍 Directions</a><a class="official" href="https://cp4.harriscountytx.gov/Community-Centers/Community-Center/mary-jo-peckham-aquatic-fitness-center" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-10" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Thu 7/30</div><div><h3>Houston Arboretum Nature Hunt</h3><div class="day-meta"><span class="pill">🕒 9–11:30 a.m.</span><span class="pill">💵 Free; Thursday parking typically free</span></div><p><strong>Plan:</strong> Bring water, bug spray and wildlife checklist.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Houston+Arboretum+and+Nature+Center" target="_blank">📍 Directions</a><a class="official" href="https://houstonarboretum.org/plan-your-visit/" target="_blank">🔗 Official details</a><a class="backup" href="guides/nature-hunt.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-11" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Fri 7/31</div><div><h3>Frosty Fridays at Katy City Park</h3><div class="day-meta"><span class="pill">🕒 10–11:30 a.m.</span><span class="pill">💵 Free</span></div><p><strong>Plan:</strong> Arrive early; confirm event page before leaving.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Katy+City+Park,+Katy,+TX" target="_blank">📍 Directions</a><a class="official" href="https://www.cityofkaty.com/visitors/events" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-12" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Sat 8/1</div><div><h3>Discovery Green Water + Playground</h3><div class="day-meta"><span class="pill">🕒 9–11:30 a.m.</span><span class="pill">💵 Free; parking extra</span></div><p><strong>Plan:</strong> Water shoes, towels, change of clothes and snacks.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Discovery+Green,+Houston,+TX" target="_blank">📍 Directions</a><a class="official" href="https://www.discoverygreen.com/" target="_blank">🔗 Official details</a><a class="backup" href="home.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article><article class="day" data-day-id="day-13" draggable="true"><button aria-label="Drag to reorder activity" class="drag-handle no-print" title="Drag to reorder" type="button">⋮⋮</button><div class="date-badge">Sun 8/2</div><div><h3>Kids’ Choice Olympics + Ice Cream</h3><div class="day-meta"><span class="pill">🕒 Morning or evening</span><span class="pill">💵 Free plus treats</span></div><p><strong>Plan:</strong> Use the ready-made event list and scorecard.</p><div class="day-links"><a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;origin=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX&amp;destination=Cory+Cornel+Lane+and+Grayson+Gardens+Drive,+Richmond,+TX" target="_blank">📍 Directions</a><a class="official" href="home.html" target="_blank">🔗 Official details</a><a class="backup" href="guides/olympics.html">🧰 Related help</a></div></div><div class="move-buttons no-print"><button aria-label="Move activity up" class="move-up" title="Move up" type="button">↑</button><button aria-label="Move activity down" class="move-down" title="Move down" type="button">↓</button></div></article></div></div></section></main><footer class="footer"><div class="wrap">Plans, pricing, weather, and streaming availability can change. Recheck linked sources before using them.</div></footer><nav class="mobile-nav"><a href="index.html"><strong>🎟️</strong>Activities</a><a href="itinerary.html"><strong>🗓️</strong>Plan</a><a href="home.html"><strong>🏠</strong>Home</a><a href="movies.html"><strong>🎬</strong>Movies</a><a href="food.html"><strong>🍕</strong>Food</a><a href="toolkit.html"><strong>🎒</strong>Toolkit</a></nav><script src="app.js"></script><script>
+(() => {
+  const list = document.querySelector('.itinerary');
+  if (!list) return;
+  const key = 'kitaKidventureItineraryOrderV1';
+  const cards = () => [...list.querySelectorAll('.day')];
+  const originalOrder = cards().map(card => card.dataset.dayId);
+
+  function saveOrder() {
+    localStorage.setItem(key, JSON.stringify(cards().map(card => card.dataset.dayId)));
+    updateButtons();
+  }
+
+  function restoreOrder() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(saved) || !saved.length) return;
+      const byId = new Map(cards().map(card => [card.dataset.dayId, card]));
+      saved.forEach(id => { if (byId.has(id)) list.appendChild(byId.get(id)); });
+      byId.forEach((card, id) => { if (!saved.includes(id)) list.appendChild(card); });
+    } catch (_) {}
+  }
+
+  function updateButtons() {
+    cards().forEach((card, index, all) => {
+      card.querySelector('.move-up').disabled = index === 0;
+      card.querySelector('.move-down').disabled = index === all.length - 1;
+    });
+  }
+
+  list.addEventListener('click', event => {
+    const button = event.target.closest('.move-up, .move-down');
+    if (!button) return;
+    const card = button.closest('.day');
+    if (button.classList.contains('move-up') && card.previousElementSibling?.classList.contains('day')) {
+      list.insertBefore(card, card.previousElementSibling);
+    } else if (button.classList.contains('move-down') && card.nextElementSibling?.classList.contains('day')) {
+      list.insertBefore(card.nextElementSibling, card);
+    }
+    saveOrder();
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  let dragging = null;
+  list.addEventListener('dragstart', event => {
+    const card = event.target.closest('.day');
+    if (!card) return;
+    dragging = card;
+    card.classList.add('dragging');
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', card.dataset.dayId);
+  });
+  list.addEventListener('dragover', event => {
+    event.preventDefault();
+    const target = event.target.closest('.day');
+    cards().forEach(card => card.classList.remove('drag-over'));
+    if (target && target !== dragging) target.classList.add('drag-over');
+  });
+  list.addEventListener('drop', event => {
+    event.preventDefault();
+    const target = event.target.closest('.day');
+    if (!dragging || !target || target === dragging) return;
+    const rect = target.getBoundingClientRect();
+    const after = event.clientY > rect.top + rect.height / 2;
+    list.insertBefore(dragging, after ? target.nextSibling : target);
+    saveOrder();
+  });
+  list.addEventListener('dragend', () => {
+    cards().forEach(card => card.classList.remove('dragging','drag-over'));
+    dragging = null;
+  });
+
+  document.getElementById('reset-itinerary')?.addEventListener('click', () => {
+    const byId = new Map(cards().map(card => [card.dataset.dayId, card]));
+    originalOrder.forEach(id => list.appendChild(byId.get(id)));
+    localStorage.removeItem(key);
+    updateButtons();
+  });
+
+  restoreOrder();
+  updateButtons();
+})();
+</script></body></html>
